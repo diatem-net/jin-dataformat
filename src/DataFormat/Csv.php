@@ -74,6 +74,7 @@ class Csv
   {
     $this->data = $queryResult->getDatasInArray(true, true);
     $this->useHeaders = $useHeaders;
+    $this->useAssociativeArray = true;
   }
 
   /**
