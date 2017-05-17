@@ -21,21 +21,21 @@ class Excel
    *
    * @var array
    */
-  private $data;
+  protected $data;
 
   /**
    * Définit si on écrit les en-têtes de colonne ou non.
    *
    * @var boolean
    */
-  private $useHeaders = true;
+  protected $useHeaders = true;
 
   /**
    * Alphabet
    *
    * @var array
    */
-  private static $alphabet = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+  protected static $alphabet = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
 
   /**
    * Constructeur
@@ -215,7 +215,7 @@ class Excel
    *
    * @return \PHPExcel
    */
-  private function getExcelObjectFromData()
+  protected function getExcelObjectFromData()
   {
     //Création objet PHPExcel
     $objPHPExcel = new \PHPExcel();
@@ -259,7 +259,7 @@ class Excel
    * @param integer $num    Index de la colonne
    * @return string
    */
-  private static function getAlphaColumnFromIndex($num)
+  protected static function getAlphaColumnFromIndex($num)
   {
     $numeric = $num % 26;
     $letter = chr(65 + $numeric);

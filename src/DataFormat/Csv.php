@@ -20,28 +20,28 @@ class Csv
    *
    * @var array
    */
-  private $data;
+  protected $data;
 
   /**
    * Définit si on écrit les en-têtes de colonne ou non
    *
    * @var boolean
    */
-  private $useHeaders = true;
+  protected $useHeaders = true;
 
   /**
    * Définit si on utilise un tableau associatif ou non
    *
    * @var boolean
    */
-  private $useAssociativeArray = false;
+  protected $useAssociativeArray = false;
 
   /**
    * Caractère pour protéger les champs
    *
    * @var string
    */
-  private $enclosures = '"';
+  protected $enclosures = '"';
 
   /**
    * Constructeur
@@ -174,7 +174,7 @@ class Csv
    * @param string $delimiter    Field separator
    * @param string $enclosure    Enclosure
    */
-  private function fputcsv($filePointer, $dataArray, $delimiter = ",",   $enclosure = "\"")
+  protected function fputcsv($filePointer, $dataArray, $delimiter = ",",   $enclosure = "\"")
   {
     // Build the string
     $string = "";
@@ -207,7 +207,7 @@ class Csv
    *
    * @param ressource $fp
    */
-  private function writeDataInIO($fp)
+  protected function writeDataInIO($fp)
   {
     // Écriture des données
     if ($this->useAssociativeArray) {

@@ -87,7 +87,7 @@ class Json
    * @param  array $array  Données à encoder
    * @return string
    */
-  private static function encodeWithStringConvert($array)
+  protected static function encodeWithStringConvert($array)
   {
     return json_encode(static::convert($array), JSON_HEX_QUOT | JSON_HEX_TAG);
   }
@@ -98,7 +98,7 @@ class Json
    * @param  array $array  Tableau à encoder
    * @return string
    */
-  private static function convert($array)
+  protected static function convert($array)
   {
     if (is_array($array)) {
       foreach($array AS $key => $value) {
