@@ -2,7 +2,7 @@
     "name": "diatem-net/jin-dataformat",
     "description": "Utility classes related to some data formats as CSV, JSON...",
     "type": "library",
-    "license": "GPLv3",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Loïc Gérard",
